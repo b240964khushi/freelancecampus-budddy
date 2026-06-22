@@ -8,9 +8,9 @@
     "typecheck:libs": "tsc --build",
     "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck"
   },
-  "packageManager": "pnpm@9.15.4",
+  "packageManager": "pnpm@10",
   "engines": {
-    "node": "22.x"
+    "node": "24.x"
   },
   "private": true,
   "devDependencies": {
