@@ -1,7 +1,7 @@
 {
-  "buildCommand": "pnpm --filter ./frontend build",
+  "buildCommand": "pnpm --filter frontend build",
   "outputDirectory": "frontend/dist",
-  "installCommand": "pnpm install",
+  "installCommand": "pnpm install --frozen-lockfile --child-concurrency 1",
   "devCommand": "node api/index.js",
   "rewrites": [
     {
