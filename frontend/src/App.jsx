@@ -6,6 +6,7 @@ import AvailableItems from './components/AvailableItems'
 import DemandForm from './components/DemandForm'
 import ViewDemands from './components/ViewDemands'
 import Login from './pages/Login'
+import Register from './pages/Register'
 
 function ProtectedApp() {
   const [currentPage, setCurrentPage] = useState('supply')
@@ -63,10 +64,11 @@ export default function App() {
           user ? <Navigate to="/" replace /> : <Login setUser={setUser} />
         }
       />
-      {/* Block /register — registration is closed */}
       <Route
         path="/register"
-        element={<Navigate to="/login" replace />}
+        element={
+          user ? <Navigate to="/" replace /> : <Register setUser={setUser} />
+        }
       />
       <Route
         path="/*"
